@@ -17,6 +17,7 @@ import {signIn, reset} from '../../actions/appActions';
 class LogIn extends React.Component {
 
     signIn = async () => {
+
         const response = await this.props.signIn();
         console.log('response ::: ', response);
         console.log(this.props);

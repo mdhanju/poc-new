@@ -1,9 +1,11 @@
 import React from 'react';
 import {Table} from 'reactstrap';
+import Checkbox from 'rc-checkbox';
 
 function RenderLoadHead() {
     return (<thead>
         <tr>
+            <th> <Checkbox/> </th>
             <th>Ticket#</th>
             <th>Product</th>
             <th>Category</th>
@@ -17,6 +19,7 @@ function RenderLoadBodyItems({
     item = {}
 }) {
     return (<tr>
+        <td><Checkbox/></td>
         <td>{item.id}</td>
         <td>{item.checkNo}</td>
         <td>{item.account}</td>

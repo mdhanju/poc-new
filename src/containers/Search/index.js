@@ -15,6 +15,8 @@ import ReduxInput from '../../components/ReduxInput';
 import {searchItems, updateSearchResult} from '../../actions/searchActions';
 import SearchResults from '../SearchResults';
 import queryString from 'query-string';
+import { BrowserRouter as Router, Route, withRouter } from 'react-router-dom'
+
 
 class Search extends React.Component {
 
@@ -101,4 +103,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
     updateSearchResult
 }, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Search));
