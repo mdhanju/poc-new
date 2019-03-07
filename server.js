@@ -10,4 +10,9 @@ app.get('/',function(req,res)   {
     //res.sendFile((path.join(__dirname + '/src/index.js')));
     res.render('index');
   });
+app.get('/data',function(req,res)   {
+    res.json({
+        status: "OK"
+    });
+  });
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
